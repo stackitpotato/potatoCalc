@@ -1,8 +1,8 @@
 game = {
-//empty array to be filled with selected cards
+//empty array representing player stack, to be filled with selected cards
     potatoStack: [],
 
-// Node list of all the card elements
+// Node list of all the card elements from HTML
     cards: document.querySelectorAll('.card'),
 
 //empty 'score' value to be added to throughout the game
@@ -24,6 +24,11 @@ function potatoCalc() {
     }
 }
 
+/** adding a card to the potato stack when clicked:
+ * 1) takes HTML id of each card
+ * 2) sets it to 'cardName'
+ * 3) adds it to the potatoStack (array in game object)
+ */
 game.cards.forEach(function (card) {
     card.addEventListener('click', function (e) {
         e.stopImmediatePropagation()
