@@ -26,14 +26,12 @@ function potatoCalc() {
 
 /** adding a card to the potato stack when clicked:
  * 1) takes HTML id of each card
- * 2) sets it to 'cardName'
  * 3) adds it to the potatoStack (array in game object)
  */
 game.cards.forEach(function (card) {
     card.addEventListener('click', function (e) {
         e.stopImmediatePropagation()
-        let cardName = this.id
-        game.potatoStack.push(cardName)
+        game.potatoStack.push(this.id)
     })
 })
 
