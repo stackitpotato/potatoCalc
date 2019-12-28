@@ -1,12 +1,18 @@
+function updateScore() {
+    document.querySelector('.score').textContent = 'Score: ' + game.score
+}
+
+
 function butter() {
     //bottom of the stack (first item selected)
     let bottom = game.potatoStack[0]
 
     if (bottom === 'butter') {
         game.score += 4
-        document.querySelector('.score').textContent = 'Score: ' + game.score
+        updateScore()
     }
 }
+
 
 function beans() {
     game.potatoStack.forEach(function (card) {
@@ -19,7 +25,9 @@ function beans() {
     } else if (game.beanCount > 5) {
         game.score += 25
     }
+    updateScore()
 }
+
 
 function calculateScore() {
     butter()

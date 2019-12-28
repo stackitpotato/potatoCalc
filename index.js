@@ -28,6 +28,12 @@ game.cards.forEach(function (card) {
     })
 })
 
+document.querySelector('.calculate').addEventListener('click', function (e) {
+    e.preventDefault()
+    calculateScore()
+})
+
+
 
 //add calculate score button with event listener
 
