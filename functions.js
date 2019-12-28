@@ -15,6 +15,7 @@ function butter() {
 
 
 function beans() {
+    game.beanCount = 0
     game.potatoStack.forEach(function (card) {
         if (card === 'beans') {
             game.beanCount += 1
@@ -30,7 +31,9 @@ function beans() {
 
 
 function calculateScore() {
+    game.score = 0
     butter()
     beans()
+    game.potatoStack = []
 }
     
