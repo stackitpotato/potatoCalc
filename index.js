@@ -19,12 +19,10 @@ var top = game.potatoStack[game.potatoStack.count - 1]
 function potatoCalc() {
     //bottom of the stack (first item selected)
     let bottom = game.potatoStack[0]
-
-    console.log(game.score)
-
+    
     if (bottom == 'butter') {
         game.score += 4
-        document.querySelector('.score').textContent = 'Score: '
+        document.querySelector('.score').textContent = 'Score: ' + game.score
 
     }
 }
