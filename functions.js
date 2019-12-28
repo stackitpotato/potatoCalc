@@ -6,7 +6,9 @@ function butter() {
         game.score += 4
         document.querySelector('.score').textContent = 'Score: ' + game.score
     }
+}
 
-    function calculateScore() {
-        butter()
-    }
+function calculateScore() {
+    butter()
+}
+    
