@@ -1,3 +1,5 @@
+
+
 game = {
 //empty array representing player stack, to be filled with selected cards
     potatoStack: [],
@@ -10,22 +12,9 @@ game = {
 }
 
 
-
 //top of the stack (count of items -1 to account for zero index)
 var top = game.potatoStack[game.potatoStack.count - 1]
 
-
-
-function potatoCalc() {
-    //bottom of the stack (first item selected)
-    let bottom = game.potatoStack[0]
-    
-    if (bottom == 'butter') {
-        game.score += 4
-        document.querySelector('.score').textContent = 'Score: ' + game.score
-
-    }
-}
 
 /** adding a card to the potato stack when clicked:
  * 1) takes HTML id of each card
@@ -35,13 +24,10 @@ game.cards.forEach(function (card) {
     card.addEventListener('click', function (e) {
         e.stopImmediatePropagation()
         game.potatoStack.push(this.id)
-        potatoCalc()
+        calculateScore()
     })
 })
 
-
-
-// Butter: BOTTOM = 4, other = 0
 
 // Beans: 1 for every bean in stack
 //forEach loop
@@ -58,7 +44,6 @@ game.cards.forEach(function (card) {
 //'most chicken?' buttons
 
 //Salt+Pepper: +1 to every layer underneath
-
 
 
 //for loop will help to identify position of things
