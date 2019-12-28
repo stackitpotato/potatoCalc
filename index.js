@@ -1,11 +1,12 @@
-
-
 game = {
 //empty array representing player stack, to be filled with selected cards
     potatoStack: [],
 
 // Node list of all the card elements from HTML
     cards: document.querySelectorAll('.card'),
+
+//number of beans cards in stack
+    beanCount: 0,
 
 //empty 'score' value to be added to throughout the game
     score: 0
@@ -24,9 +25,11 @@ game.cards.forEach(function (card) {
     card.addEventListener('click', function (e) {
         e.stopImmediatePropagation()
         game.potatoStack.push(this.id)
-        calculateScore()
     })
 })
+
+
+//add calculate score button with event listener
 
 
 // Beans: 1 for every bean in stack
@@ -61,8 +64,3 @@ game.cards.forEach(function (card) {
 // for(var i=0;i<thing.count; i++){
 //
 // }
-
-
-
-
-
