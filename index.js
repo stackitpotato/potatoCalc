@@ -9,8 +9,7 @@ game = {
     score: 0
 }
 
-//bottom of the stack (first item selected)
-var bottom = game.potatoStack[0]
+
 
 //top of the stack (count of items -1 to account for zero index)
 var top = game.potatoStack[game.potatoStack.count - 1]
@@ -18,9 +17,15 @@ var top = game.potatoStack[game.potatoStack.count - 1]
 
 
 function potatoCalc() {
+    //bottom of the stack (first item selected)
+    let bottom = game.potatoStack[0]
+
+    console.log(game.score)
+
     if (bottom == 'butter') {
+        game.score += 4
         document.querySelector('.score').textContent = 'Score: '
-        score += 4
+
     }
 }
 
@@ -32,6 +37,7 @@ game.cards.forEach(function (card) {
     card.addEventListener('click', function (e) {
         e.stopImmediatePropagation()
         game.potatoStack.push(this.id)
+        potatoCalc()
     })
 })
 
