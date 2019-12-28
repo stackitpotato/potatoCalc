@@ -9,3 +9,16 @@ h1 {
     padding-top: 50px;
     text-align: center;
 }
+
+.cards {
+    overflow: auto;
+}
+
+.card {
+    float: left;
+}
+
+.card img {
+    width: 200px;
+    height: 200px;
+}
