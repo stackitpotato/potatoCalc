@@ -28,7 +28,6 @@ game.cards.forEach(function (card) {
     card.addEventListener('click', function (e) {
         e.stopImmediatePropagation()
         game.potatoStack.push(this.id)
-
     })
 })
 
