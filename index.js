@@ -9,7 +9,7 @@ game = {
     beanCount: 0,
 
 //boolean if you have the most chicken:
-    mostChicken: 1,
+    mostChicken: 0,
 
 //empty 'score' value to be added to throughout the game
     score: 0
@@ -34,6 +34,12 @@ game.cards.forEach(function (card) {
 document.querySelector('.calculate').addEventListener('click', function (e) {
     e.preventDefault()
     calculateScore()
+})
+
+document.querySelector('.mostChicken').addEventListener('click', function (e) {
+    e.preventDefault()
+    game.mostChicken = 1
+    document.querySelector('.mostChicken').value = "Thanks!"
 })
 
 
