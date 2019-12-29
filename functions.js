@@ -91,8 +91,8 @@ function chilli(i) {
 
 
 function saltAndPepper(i) {
-    scores.push(i)
     scores.push(0)
+    game.saltAndPepperScore += i
 }
 
 
@@ -107,11 +107,14 @@ function addScoresTogether() {
         game.score += score
     })
 
+    game.score += game.saltAndPepperScore
+
 }
 
 
 function calculateScore() {
     game.score = 0
+    game.saltAndPepperScore = 0
 
     for (var i = 0; i < stack.length; i++) {
 

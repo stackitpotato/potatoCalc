@@ -1,15 +1,19 @@
 * {
     box-sizing: border-box;
     font-family: Helvetica;
+    color: #5d4b65;
+    background-color: #c5a4cd;
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 h1 {
-    padding-top: 20px;
     text-align: center;
 }
 
 h2 {
-    padding-top: 20px;
+    padding-bottom: 10px;
     text-align: center;
 }
 
@@ -19,14 +23,53 @@ h2 {
 
 .card {
     float: left;
+    width: 235px;
+    border-radius: 20px;
 }
 
 .card img {
     width: 200px;
-    height: 200px;
 }
 
-.buttonParent {
-    width: 100px;
-    margin: 0 auto;
+input {
+    background-color: #5d4b65;
+    color: #c5a4cd;
+    border-radius: 30px;
+    margin: 10px 0px 10px 0px;
+}
+
+.mostChickenMessage {
+    margin: 10px 0px 10px 0px;
+}
+
+#tuna {
+    border: 20px solid #85A6C0;
+}
+
+#chicken {
+    border: 20px solid #C38A55;
+}
+
+#cheese {
+    border: 20px solid #DED468;
+}
+
+#mayo {
+    border: 20px solid #99B862;
+}
+
+#beans {
+    border: 20px solid #CAA75F;
+}
+
+#chilli {
+    border: 20px solid #B33C3F;
+}
+
+#saltAndPepper {
+    border: 20px solid #714170;
+}
+
+#butter {
+    border: 20px solid #E2DB8B;
 }
