@@ -27,56 +27,41 @@ function beans() {
     } else {
         scores.push(game.beanCount)
     }
-    console.log(scores)
 }
 
 
 function chicken() {
 
     if (game.mostChicken) {
-        game.potatoStack.forEach(function (card) {
-            if (card === 'chicken') {
-                game.score += 3
-            }
-        })
+        scores.push(3)
     } else {
-        game.potatoStack.forEach(function (card) {
-            if (card === 'chicken') {
-                game.score += 1
-            }
-        })
+        scores.push(1)
     }
 }
 
 
-function tuna() {
+function tuna(i) {
 
-    for (var i = 0; i < stack.length; i++) {
+    let tunaScore = 4
 
-        if (stack[i] === 'tuna') {
-
-            let tunaScore = 4
-
-            if (stack[i - 1] === 'chicken') {
-                tunaScore -= 2
-            } else if (stack[i - 1] === 'beans') {
-                tunaScore -= 2
-            } else if (stack[i - 1] === 'chilli') {
-                tunaScore -= 2
-            }
-
-            if (stack[i + 1] === 'chicken') {
-                tunaScore -= 2
-            } else if (stack[i + 1] === 'beans') {
-                tunaScore -= 2
-            } else if (stack[i + 1] === 'chilli') {
-                tunaScore -= 2
-            }
-
-            game.score += tunaScore
-
-        }
+    if (stack[i - 1] === 'chicken') {
+        tunaScore -= 2
+    } else if (stack[i - 1] === 'beans') {
+        tunaScore -= 2
+    } else if (stack[i - 1] === 'chilli') {
+        tunaScore -= 2
     }
+
+    if (stack[i + 1] === 'chicken') {
+        tunaScore -= 2
+    } else if (stack[i + 1] === 'beans') {
+        tunaScore -= 2
+    } else if (stack[i + 1] === 'chilli') {
+        tunaScore -= 2
+    }
+
+    scores.push(tunaScore)
+    
 }
 
 
@@ -151,11 +136,11 @@ function calculateScore() {
         }
 
         if (stack[i] === 'tuna') {
-            tuna()
+            tuna(i)
         }
 
         if (stack[i] === 'chilli') {
-            chilli()
+            chilli(i)
         }
 
         if (stack[i] === 'saltAndPepper') {
