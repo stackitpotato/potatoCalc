@@ -30,8 +30,3 @@ h2 {
     width: 100px;
     margin: 0 auto;
 }
-
-.hidden {
-    visibility: hidden;
-    display: none;
-}
