@@ -47,6 +47,11 @@ function chicken() {
 }
 
 
+function tuna() {
+
+}
+
+
 function saltAndPepper() {
 
     let saltAndPepperStack = [];
@@ -75,6 +80,7 @@ function calculateScore() {
     butter()
     beans()
     chicken()
+    tuna()
     saltAndPepper()
 
     updateScore()
