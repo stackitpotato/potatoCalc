@@ -47,6 +47,24 @@ function chicken() {
 }
 
 
+function saltAndPepper() {
+
+    let saltAndPepperStack = [];
+    var element = 'saltAndPepper';
+    var index = game.potatoStack.indexOf(element);
+    while (index != -1) {
+        saltAndPepperStack.push(index);
+        index = saltAndPepperStack.indexOf(element, index + 1);
+    }
+
+    saltAndPepperStack.forEach(function (value) {
+        game.score += value
+    })
+
+}
+
+
+
 // function cheese() {
 //     let i = game.potatoStack.indexOf('cheese');
 // }
