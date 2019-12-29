@@ -31,11 +31,13 @@ game.cards.forEach(function (card) {
     })
 })
 
+//calculate Score button functionality
 document.querySelector('.calculate').addEventListener('click', function (e) {
     e.preventDefault()
     calculateScore()
 })
 
+//mostChicken button functionality
 document.querySelector('.mostChicken').addEventListener('click', function (e) {
     e.preventDefault()
     game.mostChicken = 1
