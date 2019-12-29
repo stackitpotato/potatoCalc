@@ -37,6 +37,7 @@ game.cards.forEach(function (card) {
     card.addEventListener('click', function (e) {
         e.stopImmediatePropagation()
         stack.push(this.id)
+        alert("Added!")
     })
 })
 
