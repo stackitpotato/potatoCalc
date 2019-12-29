@@ -9,7 +9,7 @@ game = {
     beanCount: 0,
 
 //boolean if you have the most chicken:
-    mostChicken: 0,
+    mostChicken: 1,
 
 //empty 'score' value to be added to throughout the game
     score: 0
