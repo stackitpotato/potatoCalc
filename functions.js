@@ -75,6 +75,7 @@ function calculateScore() {
     butter()
     beans()
     chicken()
+    saltAndPepper()
 
     updateScore()
     game.potatoStack = []
