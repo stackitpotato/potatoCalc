@@ -1,4 +1,4 @@
-function updateScore() {
+function displayScore() {
     document.querySelector('.score').textContent = 'Score: ' + game.score
 }
 
@@ -61,60 +61,52 @@ function tuna(i) {
     }
 
     scores.push(tunaScore)
-    
+
 }
 
 
-function chilli() {
+function chilli(i) {
 
-    for (var i = 0; i < stack.length; i++) {
+    let chilliScore = 2
 
-        if (stack[i] === 'chilli') {
-
-            let chilliScore = 2
-
-            if (stack[i - 1] === 'beans') {
-                chilliScore += 1
-            } else if (stack[i - 1] === 'chilli') {
-                chilliScore += 1
-            } else if (stack[i - 1] === 'tuna') {
-                chilliScore -= 1
-            }
-
-            if (stack[i + 1] === 'beans') {
-                chilliScore += 1
-            } else if (stack[i + 1] === 'chilli') {
-                chilliScore += 1
-            } else if (stack[i + 1] === 'tuna') {
-                chilliScore -= 1
-            }
-
-            game.score += chilliScore
-
-        }
+    if (stack[i - 1] === 'beans') {
+        chilliScore += 1
+    } else if (stack[i - 1] === 'chilli') {
+        chilliScore += 1
+    } else if (stack[i - 1] === 'tuna') {
+        chilliScore -= 1
     }
+
+    if (stack[i + 1] === 'beans') {
+        chilliScore += 1
+    } else if (stack[i + 1] === 'chilli') {
+        chilliScore += 1
+    } else if (stack[i + 1] === 'tuna') {
+        chilliScore -= 1
+    }
+
+    scores.push(chilliScore)
+
 }
 
 
-function saltAndPepper() {
+function saltAndPepper(i) {
+    scores.push(i)
+    scores.push(0)
+}
 
-    let saltAndPepperStack = [];
-    var element = 'saltAndPepper';
-    var index = stack.indexOf(element);
-    while (index != -1) {
-        saltAndPepperStack.push(index);
-        index = saltAndPepperStack.indexOf(element, index + 1);
-    }
 
-    saltAndPepperStack.forEach(function (value) {
-        game.score += value
+function cheese(i) {
+    scores.push(0)
+    scores[i - 1] = (scores[i - 1] * 2)
+}
+
+function addScoresTogether() {
+
+    scores.forEach(function (score) {
+        game.score += score
     })
 
-}
-
-
-function cheese() {
-    let i = game.potatoStack.indexOf('cheese');
 }
 
 
@@ -144,14 +136,18 @@ function calculateScore() {
         }
 
         if (stack[i] === 'saltAndPepper') {
-            saltAndPepper()
+            saltAndPepper(i)
         }
 
         if (stack[i] === 'cheese') {
-            cheese()
+            cheese(i)
         }
-
-        updateScore()
-        game.potatoStack = []
     }
+    
+    addScoresTogether()
+
+    displayScore()
+
+    stack = []
+    scores = []
 }
