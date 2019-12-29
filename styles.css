@@ -67,6 +67,12 @@ input {
 
 #saltAndPepper {
     border: 20px solid #714170;
+    width: 440px;
+    margin: 0 auto;
+}
+
+#saltAndPepper img {
+    width: 400px;
 }
 
 #butter {
