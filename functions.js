@@ -30,6 +30,29 @@ function beans() {
 }
 
 
+function chicken() {
+
+    if (game.mostChicken) {
+        game.potatoStack.forEach(function (card) {
+            if (card === 'chicken') {
+                game.score += 3
+            }
+        })
+    } else {
+        game.potatoStack.forEach(function (card) {
+            if (card === 'chicken') {
+                game.score += 1
+            }
+        })
+    }
+}
+
+
+// function cheese() {
+//     let i = game.potatoStack.indexOf('cheese');
+// }
+
+
 function calculateScore() {
     game.score = 0
     butter()

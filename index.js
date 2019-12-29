@@ -8,6 +8,9 @@ game = {
 //number of beans cards in stack
     beanCount: 0,
 
+//boolean if you have the most chicken:
+    mostChicken: 0,
+
 //empty 'score' value to be added to throughout the game
     score: 0
 }
@@ -25,6 +28,7 @@ game.cards.forEach(function (card) {
     card.addEventListener('click', function (e) {
         e.stopImmediatePropagation()
         game.potatoStack.push(this.id)
+
     })
 })
 
@@ -32,7 +36,6 @@ document.querySelector('.calculate').addEventListener('click', function (e) {
     e.preventDefault()
     calculateScore()
 })
-
 
 
 //add calculate score button with event listener
