@@ -41,7 +41,8 @@ document.querySelector('.calculate').addEventListener('click', function (e) {
 document.querySelector('.mostChicken').addEventListener('click', function (e) {
     e.preventDefault()
     game.mostChicken = 1
-    document.querySelector('.mostChicken').value = "Thanks!"
+    document.querySelector('.mostChicken').style.display = "none"
+    document.querySelector('.mostChickenMessage').style.display = "block"
 })
 
 

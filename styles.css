@@ -1,9 +1,14 @@
 * {
     box-sizing: border-box;
+    font-family: Helvetica;
 }
 
 h1 {
-    font-family: Helvetica;
+    padding-top: 20px;
+    text-align: center;
+}
+
+h2 {
     padding-top: 20px;
     text-align: center;
 }

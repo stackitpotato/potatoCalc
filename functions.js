@@ -20,6 +20,7 @@ function beans() {
             game.beanCount += 1
         }
     })
+
     if (game.beanCount < 6) {
         game.score += (game.beanCount * game.beanCount)
     } else if (game.beanCount > 5) {
@@ -56,6 +57,7 @@ function calculateScore() {
     butter()
     beans()
     chicken()
+
     updateScore()
     game.potatoStack = []
 }
