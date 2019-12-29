@@ -49,6 +49,36 @@ function chicken() {
 
 function tuna() {
 
+    let stack = game.potatoStack
+
+    for (var i = 0; i < stack.length; i++) {
+
+        if (stack[i] === 'tuna') {
+
+            let tunaScore = 4
+
+            if (stack[i - 1] === 'chicken') {
+                tunaScore -= 2
+            } else if (stack[i - 1] === 'beans') {
+                tunaScore -= 2
+            } else if (stack[i - 1] === 'chilli') {
+                tunaScore -= 2
+            }
+
+            if (stack[i + 1] === 'chicken') {
+                tunaScore -= 2
+            } else if (stack[i + 1] === 'beans') {
+                tunaScore -= 2
+            } else if (stack[i + 1] === 'chilli') {
+                tunaScore -= 2
+            }
+
+            game.score += tunaScore
+
+        }
+    }
+
+
 }
 
 
@@ -67,7 +97,6 @@ function saltAndPepper() {
     })
 
 }
-
 
 
 // function cheese() {

@@ -46,8 +46,6 @@ document.querySelector('.mostChicken').addEventListener('click', function (e) {
 })
 
 
-//add calculate score button with event listener
-
 
 // Beans: 1 for every bean in stack
 //forEach loop
