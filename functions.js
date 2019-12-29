@@ -90,9 +90,15 @@ function chilli() {
                 chilliScore += 1
             } else if (stack[i - 1] === 'chilli') {
                 chilliScore += 1
+            } else if (stack[i - 1] === 'tuna') {
+                chilliScore -= 1
             }
 
-            if (stack[i + 1] === 'tuna') {
+            if (stack[i + 1] === 'beans') {
+                chilliScore += 1
+            } else if (stack[i + 1] === 'chilli') {
+                chilliScore += 1
+            } else if (stack[i + 1] === 'tuna') {
                 chilliScore -= 1
             }
 
