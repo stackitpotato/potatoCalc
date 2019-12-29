@@ -34,14 +34,8 @@ var scores = game.potatoStackScores
 game.cards.forEach(function (card) {
     card.addEventListener('click', function (e) {
         e.stopImmediatePropagation()
-        game.potatoStack.push(this.id)
+        stack.push(this.id)
     })
-})
-
-//calculate Score button functionality
-document.querySelector('.calculate').addEventListener('click', function (e) {
-    e.preventDefault()
-    calculateScore()
 })
 
 //mostChicken button functionality
@@ -50,6 +44,12 @@ document.querySelector('.mostChicken').addEventListener('click', function (e) {
     game.mostChicken = 1
     document.querySelector('.mostChicken').style.display = "none"
     document.querySelector('.mostChickenMessage').style.display = "block"
+})
+
+//calculate Score button functionality
+document.querySelector('.calculate').addEventListener('click', function (e) {
+    e.preventDefault()
+    calculateScore()
 })
 
 

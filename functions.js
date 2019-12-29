@@ -143,11 +143,12 @@ function calculateScore() {
             cheese(i)
         }
     }
-    
+
     addScoresTogether()
 
     displayScore()
 
     stack = []
     scores = []
+
 }
