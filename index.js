@@ -2,6 +2,9 @@ game = {
 //empty array representing player stack, to be filled with selected cards
     potatoStack: [],
 
+//empty array to hold the scores of each card in the stack (for cheese purposes)
+    potatoStackScores: [],
+
 // Node list of all the card elements from HTML
     cards: document.querySelectorAll('.card'),
 
@@ -11,7 +14,7 @@ game = {
 //boolean if you have the most chicken:
     mostChicken: 0,
 
-//empty 'score' value to be added to throughout the game
+//final stack score (result of potatoStackScores added together)
     score: 0
 }
 
@@ -20,6 +23,8 @@ game = {
 var top = game.potatoStack[game.potatoStack.count - 1]
 
 var stack = game.potatoStack
+
+var scores = game.potatoStackScores
 
 
 /** adding a card to the potato stack when clicked:
