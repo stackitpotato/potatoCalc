@@ -19,6 +19,8 @@ game = {
 //top of the stack (count of items -1 to account for zero index)
 var top = game.potatoStack[game.potatoStack.count - 1]
 
+var stack = game.potatoStack
+
 
 /** adding a card to the potato stack when clicked:
  * 1) takes HTML id of each card
