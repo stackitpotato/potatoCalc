@@ -165,4 +165,6 @@ function calculateScore() {
     stack = []
     scores = []
 
+    document.querySelector('.stackDisplay').innerHTML = "<li></li>"
+
 }

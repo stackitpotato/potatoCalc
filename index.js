@@ -35,6 +35,12 @@ game.cards.forEach(function (card) {
         stack.push(this.id)
         alert("Added!")
         modal.style.display = "none";
+        if (this.id === 'saltAndPepper') {
+            document.querySelector('.stackDisplay').innerHTML += "<li>salt and pepper</li>"
+        } else {
+            document.querySelector('.stackDisplay').innerHTML += "<li>" + this.id + "</li>"
+        }
+
     })
 })
 
@@ -73,7 +79,6 @@ window.addEventListener('click', function (e) {
         modal.style.display = "none";
     }
 })
-
 
 
 // Beans: 1 for every bean in stack
