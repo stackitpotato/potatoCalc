@@ -90,6 +90,11 @@ function chilli(i) {
 }
 
 
+function mayo() {
+    scores.push(0)
+}
+
+
 function saltAndPepper(i) {
     scores.push(0)
     game.saltAndPepperScore += i
@@ -98,7 +103,9 @@ function saltAndPepper(i) {
 
 function cheese(i) {
     scores.push(0)
-    scores[i - 1] = (scores[i - 1] * 2)
+    if (scores[i-1] > 0) {
+        scores[i - 1] = (scores[i - 1] * 2)
+    }
 }
 
 function addScoresTogether() {
@@ -116,7 +123,7 @@ function calculateScore() {
     game.score = 0
     game.saltAndPepperScore = 0
 
-    for (var i = 0; i < stack.length; i++) {
+    for (i = 0; i < stack.length; i++) {
 
         if (stack[i] === 'chicken') {
             chicken()
@@ -136,6 +143,10 @@ function calculateScore() {
 
         if (stack[i] === 'chilli') {
             chilli(i)
+        }
+
+        if (stack[i] === 'mayo') {
+            mayo()
         }
 
         if (stack[i] === 'saltAndPepper') {
