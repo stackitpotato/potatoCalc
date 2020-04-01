@@ -79,37 +79,3 @@ window.addEventListener('click', function (e) {
         modal.style.display = "none";
     }
 })
-
-
-// Beans: 1 for every bean in stack
-//forEach loop
-
-// Chilli: 2, +1 for every bean/chilli it's next to, -1 for every tuna it's next to
-
-//Cheese: doubles the points of the layer underneath
-
-//Mayo: counts as tuna/chicken as long as it's next to one
-
-//Tuna: 4, -2 for every chilli, chicken or beans it's nest to
-
-//Chicken: if you have the most, each one is 3. If not each is worth 1
-//'most chicken?' buttons
-
-//Salt+Pepper: +1 to every layer underneath
-
-
-//for loop will help to identify position of things
-
-// var thing = ['tuna', 'mayo', 'butter']
-//
-// var last = thing.pop()
-//
-// if (last === 'butter'){
-//     console.log('4points')
-// }
-//
-// thing[0]
-//
-// for(var i=0;i<thing.count; i++){
-//
-// }
