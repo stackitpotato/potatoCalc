@@ -90,7 +90,7 @@ input {
     overflow: auto; /* Enable scroll if needed */
     padding: 60px;
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    width: 33%;
+    width: 470px;
 }
 
 .modalCard {
