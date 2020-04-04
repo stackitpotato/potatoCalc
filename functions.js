@@ -97,7 +97,10 @@ function mayo() {
 
 function saltAndPepper(i) {
     scores.push(0)
-    game.saltAndPepperScore += i
+    for (i = 0; i < stack.length; i++) {
+        scores[i] = (scores[i] + 1)
+    }
+    // game.saltAndPepperScore += i
 }
 
 
