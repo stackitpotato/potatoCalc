@@ -5,7 +5,7 @@ game = {
 //empty array to hold the scores of each card in the stack (for cheese purposes)
     potatoStackScores: [],
 
-    saltAndPepperScore: 0,
+    // saltAndPepperScore: 0,
 
 // Node list of all the card elements from HTML
     cards: document.querySelectorAll('.card'),
