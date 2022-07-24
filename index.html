@@ -1,52 +1,49 @@
 <!DOCTYPE html>
 <!--suppress XmlDuplicatedId -->
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="normalize.css"/>
-    <link rel="stylesheet" type="text/css" href="styles.css"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="normalize.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="index.js" defer></script>
     <script src="functions.js" defer></script>
     <title>Stackit Potato Calculator</title>
-</head>
-<body>
-<h1>Stack your Potato!</h1>
+  </head>
+  <body>
+    <h1>Stack your Potato!</h1>
 
-<div class="modal">
-    <div class="modalCard card" id="chicken"><img
-            src="images/chicken.png"/></div>
-    <div class="modalCard card" id="tuna"><img
-            src="images/tuna.png"/></div>
-    <div class="modalCard card" id="mayo"><img
-            src="images/mayo.png"/></div>
-</div>
+    <dialog class="modal">
+      <div class="modalCard card" id="chicken">
+        <img src="images/chicken.png" />
+      </div>
+      <div class="modalCard card" id="tuna"><img src="images/tuna.png" /></div>
+      <div class="modalCard card" id="mayo"><img src="images/mayo.png" /></div>
+    </dialog>
 
-<div class="cards">
-    <div class="card" id="butter"><img
-            src="images/butter.png"/></div>
-    <div class="card" id="beans"><img
-            src="images/beans.png"/></div>
-    <div class="card" id="chicken"><img
-            src="images/chicken.png"/></div>
-    <div class="card" id="tuna"><img
-            src="images/tuna.png"/></div>
-    <div class="card" id="chilli"><img
-            src="images/chilli.png"/></div>
-    <div class="card" id="cheese"><img
-            src="images/cheese.png"/></div>
-    <div class="myBtn" id="mayo"><img
-            src="images/mayo.png"/></div>
-    <div class="card" id="saltAndPepper"><img
-            src="images/saltAndPepper.png"/></div>
-</div>
-<input class="mostChicken" type="button" value="Click here if you have the most chicken!">
-<div class="mostChickenMessage hidden" style="display: none;">Chicken data saved; click to reset</div>
-<input class="calculate" type="button" value="Calculate!"/>
-<h1 class="score">Score: 0</h1>
-<h1>Stack (in reverse order):</h1>
-<ul class="stackDisplay">
-
-</ul>
-</body>
+    <div class="cards">
+      <div class="card" id="butter"><img src="images/butter.png" /></div>
+      <div class="card" id="beans"><img src="images/beans.png" /></div>
+      <div class="card" id="chicken"><img src="images/chicken.png" /></div>
+      <div class="card" id="tuna"><img src="images/tuna.png" /></div>
+      <div class="card" id="chilli"><img src="images/chilli.png" /></div>
+      <div class="card" id="cheese"><img src="images/cheese.png" /></div>
+      <div class="myBtn" id="mayo"><img src="images/mayo.png" /></div>
+      <div class="card" id="saltAndPepper">
+        <img src="images/saltAndPepper.png" />
+      </div>
+    </div>
+    <input
+      class="mostChicken"
+      type="button"
+      value="Click here if you have the most chicken!"
+    />
+    <div class="mostChickenMessage hidden" style="display: none">
+      Chicken data saved; click to reset
+    </div>
+    <input class="calculate" type="button" value="Calculate!" />
+    <h1 class="score">Score: 0</h1>
+    <h1>Stack (in reverse order):</h1>
+    <ul class="stackDisplay"></ul>
+  </body>
 </html>
