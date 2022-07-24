@@ -1,106 +1,114 @@
 * {
-    box-sizing: border-box;
-    font-family: Helvetica;
-    color: #5d4b65;
-    background-color: #c5a4cd;
-    width: 500px;
-    margin: 0 auto;
-    text-align: center;
+  box-sizing: border-box;
+  font-family: Helvetica;
+  color: #5d4b65;
+  background-color: #c5a4cd;
+  /* margin: 0 auto;
+  text-align: center; */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  text-align: center;
+  align-items: center;
 }
 
 h1 {
-    margin: 10px;
+  margin: 10px;
 }
 
 h2 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .cards {
-    overflow: auto;
-    width: 470px;
+  display: flex;
+  gap: 30px;
+  max-width: 470px;
 }
 
 #mayo img {
-    width: 200px;
+  width: 200px;
 }
 
 .card {
-    float: left;
-    width: 235px;
-    border-radius: 20px;
+  width: 235px;
+  border-radius: 20px;
+  height: 110px;
 }
 
 .card img {
-    width: 200px;
+  width: 200px;
 }
 
 input {
-    background-color: #5d4b65;
-    color: #c5a4cd;
-    border-radius: 30px;
-    margin: 10px 0px 10px 0px;
+  background-color: #5d4b65;
+  color: #c5a4cd;
+  border-radius: 30px;
+  margin: 10px 0px 10px 0px;
 }
 
 .mostChickenMessage {
-    margin: 10px 0px 10px 0px;
+  margin: 10px 0px 10px 0px;
 }
 
 #tuna {
-    border: 20px solid #85A6C0;
+  border: 20px solid #85a6c0;
 }
 
 #chicken {
-    border: 20px solid #C38A55;
+  border: 20px solid #c38a55;
 }
 
 #cheese {
-    border: 20px solid #DED468;
+  border: 20px solid #ded468;
 }
 
 #mayo {
-    border: 20px solid #99B862;
-    float: left;
-    width: 235px;
-    border-radius: 20px;
+  border: 20px solid #99b862;
+  width: 235px;
+  border-radius: 20px;
+  height: 110px;
 }
 
 #beans {
-    border: 20px solid #CAA75F;
+  border: 20px solid #caa75f;
 }
 
 #chilli {
-    border: 20px solid #B33C3F;
+  border: 20px solid #b33c3f;
 }
 
 #saltAndPepper {
-    border: 20px solid #714170;
+  border: 20px solid #714170;
 }
 
 #butter {
-    border: 20px solid #E2DB8B;
+  border: 20px solid #e2db8b;
 }
 
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    /*width: 100%; !* Full width *!*/
-    /*height: 100%; !* Full height *!*/
-    overflow: auto; /* Enable scroll if needed */
-    padding: 60px;
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    width: 470px;
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  /*width: 100%; !* Full width *!*/
+  /*height: 100%; !* Full height *!*/
+  overflow: auto; /* Enable scroll if needed */
+  padding: 60px;
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  width: 470px;
 }
 
 .modalCard {
-    float: none !important;
-    margin: 0 auto;
-    width: 235px;
+  float: none !important;
+  margin: 0 auto;
+  width: 235px;
 }
 
 ul {
-    font-size: 2rem;
-    list-style: none;
-    padding-left: 0px;
+  font-size: 2rem;
+  list-style: none;
+  padding-left: 0px;
 }
